@@ -90,23 +90,66 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="home" className="pt-32 pb-20 px-6">
-        <div className="container mx-auto">
-          <div className="max-w-3xl mx-auto text-center space-y-6 animate-fade-in">
-            <h2 className="text-5xl md:text-6xl font-bold text-foreground leading-tight">
-              Добро пожаловать в <span className="text-primary">14 регион</span>
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Уютное пространство для семейных встреч, деловых обедов и романтических вечеров
-            </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-              <Button size="lg" onClick={() => scrollToSection('menu')}>
-                Посмотреть меню
-              </Button>
-              <Button size="lg" variant="outline">
-                <Icon name="Phone" size={20} className="mr-2" />
-                +7 (495) 123-45-67
-              </Button>
+      <section id="home" className="relative pt-20 pb-20 px-6 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/20"></div>
+        <div className="container mx-auto relative z-10">
+          <div className="grid md:grid-cols-2 gap-12 items-center min-h-[80vh]">
+            <div className="space-y-8 animate-fade-in">
+              <div className="inline-block px-4 py-2 bg-primary/10 rounded-full text-primary text-sm font-medium">
+                С 2019 года в сердце города
+              </div>
+              <h2 className="text-5xl md:text-7xl font-bold text-foreground leading-tight">
+                Кафе<br />
+                <span className="text-primary">14 регион</span>
+              </h2>
+              <p className="text-xl text-muted-foreground leading-relaxed">
+                Уютное пространство для семейных встреч, деловых обедов и романтических вечеров. 
+                Авторская кухня встречается с домашним уютом.
+              </p>
+              <div className="flex flex-col sm:flex-row items-start gap-4 pt-4">
+                <Button size="lg" onClick={() => scrollToSection('menu')} className="w-full sm:w-auto">
+                  Посмотреть меню
+                </Button>
+                <Button size="lg" variant="outline" className="w-full sm:w-auto">
+                  <Icon name="Phone" size={20} className="mr-2" />
+                  +7 (495) 123-45-67
+                </Button>
+              </div>
+              <div className="grid grid-cols-3 gap-6 pt-8 border-t border-border">
+                <div>
+                  <div className="text-3xl font-bold text-primary">5+</div>
+                  <div className="text-sm text-muted-foreground">Лет опыта</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">50+</div>
+                  <div className="text-sm text-muted-foreground">Блюд</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-primary">4.9</div>
+                  <div className="text-sm text-muted-foreground">Рейтинг</div>
+                </div>
+              </div>
+            </div>
+            <div className="relative animate-scale-in">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+                <img
+                  src="https://cdn.poehali.dev/projects/ba7edf07-4298-4c73-9e5f-a3f5f703a6fe/files/8c21bfd9-bf80-4535-8ee4-318e79a7ea68.jpg"
+                  alt="Кафе 14 регион"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent"></div>
+              </div>
+              <div className="absolute -bottom-6 -left-6 bg-white rounded-2xl p-6 shadow-xl border border-border">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
+                    <Icon name="Star" size={24} className="text-primary fill-primary" />
+                  </div>
+                  <div>
+                    <div className="font-bold text-foreground">1000+</div>
+                    <div className="text-sm text-muted-foreground">Довольных гостей</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
