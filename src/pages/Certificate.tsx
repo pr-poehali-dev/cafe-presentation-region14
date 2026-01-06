@@ -6,68 +6,88 @@ const Certificate = () => {
   };
 
   return (
-    <div className="min-h-screen bg-secondary/30 flex items-center justify-center p-8">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-50 flex items-center justify-center p-8">
       <div className="max-w-4xl w-full">
         <div className="mb-6 flex justify-end print:hidden">
           <button
             onClick={printCertificate}
-            className="flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+            className="flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors shadow-lg"
           >
             <Icon name="Printer" size={20} />
             Распечатать
           </button>
         </div>
 
-        <div className="bg-white p-16 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-primary/60 to-primary"></div>
-          <div className="absolute bottom-0 left-0 w-full h-2 bg-gradient-to-r from-primary via-primary/60 to-primary"></div>
+        <div className="bg-white p-16 shadow-2xl relative overflow-hidden border-8 border-blue-600">
+          <div className="absolute top-0 left-0 w-full h-3 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600"></div>
+          <div className="absolute bottom-0 left-0 w-full h-3 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600"></div>
           
-          <div className="absolute top-8 left-8 w-32 h-32 border-4 border-primary/10 rounded-full"></div>
-          <div className="absolute bottom-8 right-8 w-24 h-24 border-4 border-primary/10 rounded-full"></div>
+          <div className="absolute top-6 left-6 text-6xl opacity-20">❄️</div>
+          <div className="absolute top-12 right-12 text-5xl opacity-20">🎄</div>
+          <div className="absolute bottom-12 left-16 text-5xl opacity-20">⭐</div>
+          <div className="absolute bottom-6 right-6 text-6xl opacity-20">❄️</div>
+          
+          <div className="absolute top-24 right-24 text-4xl opacity-15 animate-pulse">✨</div>
+          <div className="absolute bottom-32 left-24 text-4xl opacity-15 animate-pulse" style={{animationDelay: '0.5s'}}>✨</div>
 
-          <div className="relative z-10 space-y-12">
+          <div className="relative z-10 space-y-10">
             <div className="text-center space-y-4">
-              <div className="flex justify-center mb-6">
-                <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center">
-                  <Icon name="Award" size={40} className="text-primary" />
+              <div className="flex justify-center mb-4 gap-3">
+                <span className="text-5xl">🎉</span>
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-full flex items-center justify-center shadow-xl">
+                  <Icon name="Award" size={40} className="text-white" />
                 </div>
+                <span className="text-5xl">🎉</span>
               </div>
-              <h1 className="text-4xl font-bold text-foreground">
+              <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-700 via-blue-600 to-blue-700 bg-clip-text text-transparent">
                 БЛАГОДАРСТВЕННОЕ ПИСЬМО
               </h1>
-              <div className="w-32 h-1 bg-primary mx-auto rounded-full"></div>
+              <p className="text-xl text-blue-600 font-semibold italic">К Новому 2026 году</p>
+              <div className="flex justify-center gap-2">
+                <div className="w-20 h-1 bg-gradient-to-r from-transparent via-blue-500 to-blue-500 rounded-full"></div>
+                <span className="text-2xl">🎄</span>
+                <div className="w-20 h-1 bg-gradient-to-l from-transparent via-blue-500 to-blue-500 rounded-full"></div>
+              </div>
             </div>
 
             <div className="space-y-8 text-center max-w-2xl mx-auto">
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Настоящим письмом администрация кафе <span className="font-semibold text-foreground">"14 регион"</span> выражает 
+              <p className="text-lg text-gray-700 leading-relaxed">
+                В преддверии Нового года администрация кафе <span className="font-bold text-blue-700">"14 регион"</span> выражает 
                 искреннюю благодарность
               </p>
 
-              <div className="py-6 border-y-2 border-primary/20">
-                <h2 className="text-3xl font-bold text-foreground">
-                  Дмитриевой Прасковье Ивановне
+              <div className="py-6 px-8 bg-gradient-to-r from-blue-50 via-blue-100 to-blue-50 rounded-lg border-2 border-blue-300 shadow-lg">
+                <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">
+                  Максимовой Инне Макаровне
                 </h2>
               </div>
 
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+              <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
                 <p>
-                  За добросовестный труд, высокий профессионализм и ответственное отношение 
-                  к выполнению своих обязанностей.
+                  За безупречный труд на протяжении всего года, высокий профессионализм 
+                  и преданность своему делу. Ваша трудолюбие и ответственность 
+                  заслуживают самой высокой оценки.
                 </p>
                 <p>
-                  Ваша преданность делу, внимание к деталям и стремление создавать уютную 
-                  атмосферу для наших гостей являются примером для всего коллектива.
+                  Благодаря Вашему мастерству, теплоте и заботе о гостях, 
+                  кафе "14 регион" создаёт по-настоящему домашнюю и праздничную атмосферу. 
+                  Вы являетесь настоящим украшением нашего коллектива.
                 </p>
-                <p>
-                  Благодаря вашему вкладу кафе "14 регион" продолжает радовать гостей 
-                  качественным обслуживанием и домашним уютом.
+                <p className="font-semibold text-blue-700">
+                  Спасибо за Ваш вклад в успех нашего кафе и за то тепло, 
+                  которое Вы дарите каждому гостю!
                 </p>
               </div>
 
-              <div className="pt-8">
-                <p className="text-lg font-semibold text-foreground">
-                  Желаем вам дальнейших успехов, крепкого здоровья и благополучия!
+              <div className="pt-6 px-8 py-6 bg-gradient-to-r from-blue-600 to-blue-700 rounded-lg text-white shadow-xl">
+                <p className="text-xl font-bold mb-2">
+                  🎊 С Наступающим Новым 2026 Годом! 🎊
+                </p>
+                <p className="text-base">
+                  Желаем Вам крепкого здоровья, счастья, благополучия и новых профессиональных успехов!
+                </p>
+                <p className="text-sm mt-3 italic opacity-90">
+                  Пусть каждый день приносит радость, а все мечты исполняются! ✨
                 </p>
               </div>
             </div>
