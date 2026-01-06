@@ -117,25 +117,11 @@ const Certificate = () => {
               </div>
             </div>
 
-            <div className="text-center pt-8">
-              <div className="inline-flex items-center gap-2 text-primary">
-                <Icon name="MapPin" size={18} />
-                <span className="text-sm">г. Москва, ул. Примерная, д. 14</span>
-              </div>
-              <div className="inline-flex items-center gap-2 text-primary ml-6">
-                <Icon name="Phone" size={18} />
-                <span className="text-sm">+7 (495) 123-45-67</span>
-              </div>
-            </div>
           </div>
 
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.02] pointer-events-none">
             <div className="text-[12rem] font-bold text-primary">14</div>
           </div>
-        </div>
-
-        <div className="mt-6 text-center text-sm text-muted-foreground print:hidden">
-          <p>Благодарственное письмо · Кафе "14 регион"</p>
         </div>
       </div>
 
